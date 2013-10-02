@@ -21,7 +21,7 @@ class Rect:
         self._weight = values[4]
         
     def draw(self, img):
-        color = (250,250,250) if (self._weight > 0) else (5,5,5)
+        color = (245,245,245) if (self._weight > 0) else (10,10,10)
         cv2.rectangle(img, (self._x,self._y), (self._x + self._width - 1, self._y + self._height - 1), color, cv.CV_FILLED)
         
 ########################
@@ -84,16 +84,19 @@ class Cascade:
                 featId = int(cl[0].text.split()[2])
                 features.append(self._features[featId])
             self._stages.append(features)
-        print self._stages
+        #print self._stages
             
-        
     def getFeatures(self):
         return self._features
         
     def getStages(self):
         return self._stages
         
+    def getParams(self):
+    	return self._params
+    	
     def getImage(self):
         return self._img.copy()
+    
         
         
