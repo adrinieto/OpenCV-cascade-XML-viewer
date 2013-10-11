@@ -8,4 +8,3 @@ Usage: `python src/cascadeReader.py [cascade.xml] [sample_image]`
 - Example (files in sample folder)
 
 `python src/cascadeReader.py sample/haarcascade_frontalface_default.xml sample/face_24x24.jpg`
-
